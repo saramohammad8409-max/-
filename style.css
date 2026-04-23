@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    direction: rtl;
+    background: #e6f7ff;
+    color: #333;
+}
+
+/* الهيدر */
+header {
+    background: #00bcd4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* الكرت */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 0 10px 10px;
+}
+
+/* صفحة التفاصيل */
+.course-page {
+    padding: 20px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* زر الرجوع */
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00bcd4;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* يخليه متجاوب للجوال */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
+.course-page p {
+    line-height: 1.8;
+    margin-top: 15px;
+}
+@media (max-width: 600px) {
+    .courses {
+        grid-template-columns: 1fr;
+    }
+}
+header {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #00bcd4;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+<a href="#" class="top">⬆️</a>
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+body {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
